@@ -72,8 +72,9 @@ GET /tasks/{task_id}/	0.10	6	9	0%
 
     Среднее время ответа: 115 ms
 
-Архитектура проекта
-text
+### Архитектура проекта
+
+```text
 
 telemetry_service/
 ├── app/
@@ -94,6 +95,7 @@ telemetry_service/
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
+```
 
 Список всех эндпоинтов
 Метод	Эндпоинт	Описание
