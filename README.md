@@ -98,15 +98,15 @@ telemetry_service/
 ```
 
 Список всех эндпоинтов
-Метод	Эндпоинт	Описание
-POST	/users/	Создать пользователя
-POST	/users/{user_id}/devices/	Добавить устройство пользователю
-POST	/devices/{device_id}/stats/	Отправить показание
-GET	/devices/{device_id}/stats/	Синхронная аналитика устройства
-POST	/devices/{device_id}/stats/async/	Асинхронная аналитика устройства
-POST	/devices/users/{user_id}/stats/async/	Асинхронная аналитика пользователя
-GET	/devices/tasks/{task_id}/	Получить результат асинхронной задачи
-
+| Метод | Эндпоинт                                           | Описание                                      |
+|-------|----------------------------------------------------|-----------------------------------------------|
+| POST  | `/users/`                                          | Создать пользователя                          |
+| POST  | `/users/{user_id}/devices/`                        | Добавить устройство пользователю              |
+| POST  | `/devices/{device_id}/stats/`                      | Отправить показание                           |
+| GET   | `/devices/{device_id}/stats/`                      | Синхронная аналитика устройства               |
+| POST  | `/devices/{device_id}/stats/async/`                | Асинхронная аналитика устройства              |
+| POST  | `/devices/users/{user_id}/stats/async/`            | Асинхронная аналитика пользователя            |
+| GET   | `/devices/tasks/{task_id}/`                        | Получить результат асинхронной задачи         |
 ## Используемые технологии
 
     Python 3.11
