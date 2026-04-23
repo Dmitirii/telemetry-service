@@ -34,6 +34,7 @@ pip install -r requirements.txt
 docker run -d --name redis -p 6379:6379 redis:7-alpine   # требуется Docker
 celery -A app.celery_app worker --pool=solo --loglevel=info   # отдельный терминал
 uvicorn app.main:app --reload
+```
 
 ## Через Docker Compose
 bash
