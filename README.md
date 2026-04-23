@@ -104,7 +104,8 @@ GET	/devices/{device_id}/stats/	Синхронная аналитика устр
 POST	/devices/{device_id}/stats/async/	Асинхронная аналитика устройства
 POST	/devices/users/{user_id}/stats/async/	Асинхронная аналитика пользователя
 GET	/devices/tasks/{task_id}/	Получить результат асинхронной задачи
-Используемые технологии
+
+## Используемые технологии
 
     Python 3.11
 
