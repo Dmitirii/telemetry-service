@@ -37,18 +37,21 @@ uvicorn app.main:app --reload
 ```
 
 ## Через Docker Compose
-bash
+```bash
 
 docker-compose up --build
+```
 
 ### После запуска сервис доступен: http://localhost:8000, документация – http://localhost:8000/docs.
 
 ## Нагрузочное тестирование
 
 ### Запуск:
-bash
+```bash
 
 locust -f locustfile.py --host=http://localhost:8000
+```
+
 
 ### Результаты (10 пользователей, spawn rate 1):
 Эндпоинт	RPS	Средняя задержка (ms)	95-й перцентиль (ms)	Ошибки
