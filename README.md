@@ -35,20 +35,21 @@ docker run -d --name redis -p 6379:6379 redis:7-alpine   # требуется Do
 celery -A app.celery_app worker --pool=solo --loglevel=info   # отдельный терминал
 uvicorn app.main:app --reload
 
-Через Docker Compose
+## Через Docker Compose
 bash
 
 docker-compose up --build
 
-После запуска сервис доступен: http://localhost:8000, документация – http://localhost:8000/docs.
-Нагрузочное тестирование
+### После запуска сервис доступен: http://localhost:8000, документация – http://localhost:8000/docs.
 
-Запуск:
+## Нагрузочное тестирование
+
+### Запуск:
 bash
 
 locust -f locustfile.py --host=http://localhost:8000
 
-Результаты (10 пользователей, spawn rate 1):
+### Результаты (10 пользователей, spawn rate 1):
 Эндпоинт	RPS	Средняя задержка (ms)	95-й перцентиль (ms)	Ошибки
 POST /users/	0.24	2054	2100	0%
 POST /users/{id}/devices/	0.02	20	37	0%
@@ -57,7 +58,7 @@ GET /devices/{id}/stats/ (синхронный)	0.14	5	8	0%
 POST /devices/{id}/stats/async/	0.02	5	8	0%
 GET /tasks/{task_id}/	0.10	6	9	0%
 
-Общие показатели:
+### Общие показатели:
 
     Всего запросов: 203
 
